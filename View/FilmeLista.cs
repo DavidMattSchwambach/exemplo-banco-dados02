@@ -25,10 +25,14 @@ namespace View
 
         private void Form1_Load(object sender, EventArgs e)
         {
+        }
+
+        private void AtualizarTabela()
+        {
             FilmeRepositorio repositorio = new FilmeRepositorio();
             List<Filme> filmes = repositorio.ObterTodos();
             dataGridView1.Rows.Clear();
-            for(int i = 0; i < filmes.Count; i++)
+            for (int i = 0; i < filmes.Count; i++)
             {
                 Filme filme = filmes[i];
                 dataGridView1.Rows.Add(
@@ -37,7 +41,28 @@ namespace View
                     }
                 );
             }
+        }
 
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+            FilmeRepositorio repositorio = new FilmeRepositorio();
+            repositorio.Apagar(id);
+
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);
+            
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            FilmeCadastro cadastro = new FilmeCadastro();
+            cadastro.ShowDialog();
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            AtualizarTabela();
         }
     }
 }

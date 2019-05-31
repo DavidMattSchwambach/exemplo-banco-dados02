@@ -28,3 +28,5 @@ C:\Users\65972\Desktop\exemplo-banco-dados02\View\obj\Debug\View.csproj.CoreComp
 C:\Users\65972\Desktop\exemplo-banco-dados02\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\65972\Desktop\exemplo-banco-dados02\View\obj\Debug\View.exe
 C:\Users\65972\Desktop\exemplo-banco-dados02\View\obj\Debug\View.pdb
+C:\Users\65972\Desktop\exemplo-banco-dados02\View\obj\Debug\View.FilmeCadastro.resources
+C:\Users\65972\Desktop\exemplo-banco-dados02\View\obj\Debug\View.FilmeEditar.resources

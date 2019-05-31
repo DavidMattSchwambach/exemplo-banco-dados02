@@ -16,6 +16,7 @@ namespace Repositorio
         /*
          * Método que irá retornar os dados dos filmes(List<Filme>) da tabela de filmes
          */
+        //SELECT todos
         public List<Filme> ObterTodos()
         {
             
@@ -69,7 +70,7 @@ namespace Repositorio
             return filmes;
 
         }
-
+        //SELECT um
         public Filme obterPeloId(int id)
         {
             SqlConnection conexao = new SqlConnection();
@@ -100,7 +101,7 @@ namespace Repositorio
             }
             return null;
         }
-
+        //CREATE
         public void Inserir(Filme filme)
         {
             SqlConnection conexao = new SqlConnection();
@@ -119,7 +120,7 @@ namespace Repositorio
             comando.Parameters.AddWithValue("@TEM_SEQUENCIA", filme.TemSequencia);
             comando.ExecuteNonQuery();
         }
-
+        //DELETE
         public void Apagar(int id)
         {
             SqlConnection conexao = new SqlConnection();
@@ -133,7 +134,7 @@ namespace Repositorio
             comando.ExecuteNonQuery();
             conexao.Close();
         }
-
+        //UPDATE
         public void Atualizar(Filme filme)
         {
             SqlConnection conexao = new SqlConnection();
