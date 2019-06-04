@@ -186,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(295, 419);
             this.Controls.Add(this.ckbTemSequencia);
             this.Controls.Add(this.txtAvaliacao);

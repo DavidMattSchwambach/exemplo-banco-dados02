@@ -71,7 +71,7 @@ namespace Repositorio
 
         }
         //SELECT um
-        public Filme obterPeloId(int id)
+        public Filme ObterPeloId(int id)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -79,7 +79,7 @@ namespace Repositorio
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "SELECT * FROM filmes HERE id = @ID";
+            comando.CommandText = "SELECT * FROM filmes WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", id);
 
@@ -94,7 +94,7 @@ namespace Repositorio
                 filme.Nome = linha["nome"].ToString();
                 filme.Categoria = linha["categoria"].ToString();
                 filme.Curtiu = Convert.ToBoolean(linha["curtiu"]);
-                filme.Duracao = Convert.ToDateTime(linha["duraacao"]);
+                filme.Duracao = Convert.ToDateTime(linha["duracao"]);
                 filme.Avaliacao = Convert.ToDecimal(linha["avaliacao"]);
                 filme.TemSequencia = Convert.ToBoolean(linha["tem_sequencia"]);
                 return filme;
